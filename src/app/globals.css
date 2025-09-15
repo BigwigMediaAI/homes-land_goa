@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+#google_translate_element span {
+  display: none;
+}
+
+.goog-te-gadget {
+  font-size: 0px !important;
+}
+
+#google_translate_element select {
+  @apply bg-transparent text-white border border-white px-2 rounded-full py-1;
+}
+
+#google_translate_element select option {
+  background-color: white;
+  color: white;
+}
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* Hide Google’s default gadget icon */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* Force white text inside custom language selector */
+select,
+select option {
+  color: white !important;
+}
+
+/* For your specific selector */
+.language-selector {
+  color: white !important;
+  max-width: 120px;
+}
+
+.language-selector option {
+  color: white !important;
+  background-color: #091d35 !important;
+}
+
+:root {
+  --primary-color: #4f3527;
+  --title: #2b1b12;
+  --bg-color: #fef7f2;
+}
+
+.react-quill-editor {
+  height: 300px; /* or whatever you prefer */
+  display: flex;
+  flex-direction: column;
+}
+
+.react-quill-editor .ql-toolbar {
+  flex-shrink: 0;
+}
+
+.react-quill-editor .ql-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Hide number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
