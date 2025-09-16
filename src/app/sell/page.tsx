@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import axios from "axios";
 import {
   Phone,
   Mail,
@@ -21,103 +20,7 @@ import ContactInfo from "../../../components/ContactInfo";
 import HelpSection from "../../../components/HelpSection";
 
 function Sell() {
-  const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    title: "",
-    description: "",
-    purpose: "Buy",
-    type: "",
-    location: "",
-    price: "",
-    bedrooms: "",
-    bathrooms: "",
-    areaSqft: "",
-    highlights: "[]",
-    featuresAmenities: "[]",
-    nearby: "[]",
-    googleMapUrl: "",
-    videoLink: "",
-    extraHighlights: "[]",
-  });
-
-  const [images, setImages] = useState<FileList | null>(null);
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setImages(e.target.files);
-  };
-
-  const resetForm = () => {
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      title: "",
-      description: "",
-      purpose: "Buy",
-      type: "",
-      location: "",
-      price: "",
-      bedrooms: "",
-      bathrooms: "",
-      areaSqft: "",
-      highlights: "[]",
-      featuresAmenities: "[]",
-      nearby: "[]",
-      googleMapUrl: "",
-      videoLink: "",
-      extraHighlights: "[]",
-    });
-    setImages(null);
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
-    try {
-      const data = new FormData();
-      for (const key in formData) {
-        data.append(key, formData[key as keyof typeof formData]);
-      }
-
-      if (images) {
-        Array.from(images).forEach((file) => {
-          data.append("images", file);
-        });
-      }
-
-      await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE}/sellproperty/addsell`,
-        data,
-        {
-          headers: { "Content-Type": "multipart/form-data" },
-        }
-      );
-
-      alert(
-        "Thank you! Your property is under review. We’ll get back to you soon."
-      );
-      resetForm();
-    } catch (error) {
-      console.error(error);
-      alert("Failed to submit listing. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const sellRef = useRef<HTMLDivElement | null>(null);
   const scrollToNext = () => {
