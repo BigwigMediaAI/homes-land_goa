@@ -37,7 +37,7 @@ const ScrollToTopButton = () => {
              a 15.9155 15.9155 0 0 1 0 31.831
              a 15.9155 15.9155 0 0 1 0 -31.831"
           fill="none"
-          stroke="#A97B64"
+          stroke="#091d35"
           strokeWidth="2"
           strokeDasharray="100, 100"
           strokeDashoffset={`${100 - scrollPercent}`}

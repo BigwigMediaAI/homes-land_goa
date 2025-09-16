@@ -62,12 +62,12 @@ const Footer = () => {
           <ul className="space-y-3 text-base ">
             <li>
               <Link
-                href="https://instagram.com/yourprofile"
+                href="https://www.instagram.com/homes.land.goa?igsh=MWNvZXlwdW53YmJwZw%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 cursor-pointer hover:text-[var(--primary-color)]"
+                className="flex items-center gap-2 cursor-pointer text-current hover:text-[#e24b5b]"
               >
-                <Instagram size={18} /> Instagram
+                <Instagram size={18} className="text-current" /> Instagram
               </Link>
             </li>
             <li>
@@ -75,12 +75,12 @@ const Footer = () => {
                 href="https://facebook.com/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 cursor-pointer hover:text-[var(--primary-color)]"
+                className="flex items-center gap-2 cursor-pointer text-current hover:text-[#1877F2]"
               >
-                <Facebook size={18} /> Facebook
+                <Facebook size={18} className="text-current" /> Facebook
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="https://twitter.com/yourprofile"
                 target="_blank"
@@ -89,7 +89,7 @@ const Footer = () => {
               >
                 <SiX size={18} /> Twitter (X)
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
