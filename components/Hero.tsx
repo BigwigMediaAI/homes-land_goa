@@ -69,7 +69,7 @@ export default function Hero() {
           <Link href="/contacts">
             <button
               className="relative px-6 py-3  bg-[#E50E0B] text-white font-semibold 
-                overflow-hidden group cursor-pointer transition-all duration-300"
+                overflow-hidden group cursor-pointer transition-all duration-300 rounded"
             >
               <span className="relative z-10 tracking-widest">Contact Us</span>
               <span

@@ -235,7 +235,7 @@ export default function BuyPage() {
                     <button
                       onClick={() => router.push(`/buy/${p.slug}`)}
                       className="relative px-6 py-3 bg-[#E50E0B] text-white font-semibold 
-                      overflow-hidden group cursor-pointer transition-all duration-300 w-full mt-4"
+                      overflow-hidden group cursor-pointer transition-all duration-300 w-full mt-4 rounded"
                     >
                       <span className="relative z-10 tracking-widest">
                         View Details

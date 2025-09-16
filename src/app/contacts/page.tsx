@@ -200,8 +200,8 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={loading}
-            className="relative px-6 py-3  bg-[var(--title)] text-white font-semibold 
-  overflow-hidden group cursor-pointer transition-all duration-300"
+            className="relative px-6 py-3  bg-[#E50E0B] text-white font-semibold 
+  overflow-hidden group cursor-pointer transition-all duration-300 rounded"
           >
             <span className="relative z-10">
               {loading ? "Submitting..." : "Submit"}
